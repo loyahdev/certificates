@@ -3,6 +3,6 @@
   "cert": "Sunshine Insurance Group Co., Ltd.",
   "date": "Monday, November 20",
   "expire": "Sunday Nov 1, 2026",
-  "blacklisting": true,
+  "blacklisting": "True",
   "download": "https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loyahdev/certificates/blob/main/Sunshine%20Insurance%20Group%20Co%20%20Ltd.zip"
 }
