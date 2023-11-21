@@ -1,9 +1,8 @@
 {
   "status": "Unavailable",
-  "cert": "Sunshine Insurance Group Co., Ltd.",
+  "description": "Sideloading is currently down. Please wait for a new Hydrogen version to release.",
   "date": "Monday, November 20",
-  "expire": "Sunday Nov 1, 2026",
-  "blacklisting": "True",
-  "download": "https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/loyahdev/certificates/blob/main/Sunshine%20Insurance%20Group%20Co%20%20Ltd.zip",
+  "epected-release": "Monday, November 20 (22:00 MST)",
+  "dev-status": "The issue has been identified and is actively being worked on.",
   "color": "#ff1100"
 }
