@@ -1,6 +1,6 @@
 {
   "status": "Revoked",
-  "cert": "Unknown",
+  "cert": "<Name(CN=Apple Worldwide Developer Relations Certification Authority,OU=G3,O=Apple Inc.,C=US)>",
   "date": "2023-11-03 01:50:09",
   "expire": "2026-11-02 01:50:08",
   "blacklisting": "Unknown",
