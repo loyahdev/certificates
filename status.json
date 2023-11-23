@@ -1,8 +1,8 @@
 {
-  "status": "Revoked",
-  "cert": "HDFC Life Insurance Company Limited",
-  "date": "2023-08-01 10:00:27",
-  "expire": "2026-07-31 10:00:26",
+  "status": "Signed",
+  "cert": "Apple Distribution: David Neil HENSCH (FAUDYS92MB)",
+  "date": "2023-11-05 14:15:47",
+  "expire": "2024-11-04 14:15:46",
   "blacklisting": "Unknown",
-  "color": "#ff0000"
+  "color": "#00ff00"
 }
