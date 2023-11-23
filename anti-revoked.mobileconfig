@@ -32,7 +32,7 @@
 				</dict>
 			</array>
 			<key>PayloadDisplayName</key>
-			<string>DNS Chặn Thu Hồi Có Chặn ADS</string>
+			<string>DNS Apple 1.0</string>
 			<key>PayloadIdentifier</key>
 			<string>com.apple.dnsSettings.managed.9d981129-d086-4891-b2cf-165ede3f8a90</string>
 			<key>PayloadOrganization</key>
