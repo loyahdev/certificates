@@ -91,7 +91,7 @@
 - Made by The iNside Devs ❤️
 Installing this profile allows you to block Apple from revoking certificates on your device!</string>
 	<key>PayloadDisplayName</key>
-	<string>DNS Chặn Thu Hồi Editer Khơindvn</string>
+	<string>Hydrogen Anti Revoke</string>
 	<key>PayloadIdentifier</key>
 	<string>com.loyahddv.apple-dns.19283.4cci39rhfh93.jekjd292js</string>
 	<key>PayloadRemovalDisallowed</key>
