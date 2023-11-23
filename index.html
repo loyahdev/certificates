@@ -1,31 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Simple File Storage</title>
+    <title>Classic File Storage</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Courier New', Courier, monospace;
             margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
+            padding: 0;
+            background-color: #e0e0e0;
         }
         .container {
-            width: 80%;
-            margin: 0 auto;
-            background-color: #fff;
+            width: 60%;
+            margin: 20px auto;
+            background-color: #f8f8f8;
             padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border: 1px solid #d3d3d3;
         }
         ul {
             list-style: none;
             padding: 0;
+            margin: 0;
         }
         li {
-            margin-bottom: 10px;
+            padding: 10px;
+            border-bottom: 1px solid #d3d3d3;
+        }
+        li:last-child {
+            border-bottom: none;
         }
         a {
             color: #333;
             text-decoration: none;
+            font-size: 14px;
         }
         a:hover {
             text-decoration: underline;
@@ -34,7 +40,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>File Storage</h1>
+        <h1 style="font-family: 'Courier New', Courier, monospace;">File Storage</h1>
         <ul>
             <!-- List of files -->
             <li><a href="FILE_URL_1" download>File 1</a></li>
