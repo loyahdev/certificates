@@ -72,7 +72,7 @@
 				</dict>
 			</array>
 			<key>PayloadDisplayName</key>
-			<string>DNS Chặn Thu Hồi Không Chặn ADS</string>
+			<string>Hydrogen Anti Revoke</string>
 			<key>PayloadIdentifier</key>
 			<string>com.apple.dnsSettings.managed.fac89862-8acc-466a-a412-81fdc856dae2</string>
 			<key>PayloadOrganization</key>
@@ -89,7 +89,7 @@
 	<string>Hydrogen Anti Revoke
 
 - Made by The iNside Devs ❤️
-Installing this profile allows you to block after from revoking certificates on your device!</string>
+Installing this profile allows you to block Apple from revoking certificates on your device!</string>
 	<key>PayloadDisplayName</key>
 	<string>DNS Chặn Thu Hồi Editer Khơindvn</string>
 	<key>PayloadIdentifier</key>
