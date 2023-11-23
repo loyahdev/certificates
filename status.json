@@ -1,8 +1,8 @@
 {
-  "status": "Revoked",
+  "status": "Signed",
   "cert": "Sunshine Insurance Group Co., Ltd.",
   "date": "Monday, November 20",
   "expire": "Sunday, Nov 1, 2026",
   "blacklisting": "True",
-  "color": "#ff0000"
+  "color": "#ffffff"
 }
