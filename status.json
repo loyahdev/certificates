@@ -1,6 +1,6 @@
 {
   "status": "Revoked",
-  "cert": "<Name(UID=LH28XA7T22,CN=iPhone Distribution: Sunshine Insurance Group Co.\\, Ltd.,OU=LH28XA7T22,O=Sunshine Insurance Group Co.\\, Ltd.,C=CN)>",
+  "cert": "Sunshine Insurance Group Co.\\",
   "date": "2023-11-03 01:50:09",
   "expire": "2026-11-02 01:50:08",
   "blacklisting": "Unknown",
