@@ -10,7 +10,7 @@
 				<key>DNSProtocol</key>
 				<string>HTTPS</string>
 				<key>ServerURL</key>
-				<string>https://dns.nextdns.io/9778f3</string>
+				<string>https://apple.dns.nextdns.io/6cbdba</string>
 			</dict>
 			<key>OnDemandRules</key>
 			<array>
@@ -32,15 +32,15 @@
 				</dict>
 			</array>
 			<key>PayloadDisplayName</key>
-			<string>Hydrogen DNS v1</string>
+			<string>Hydrogen DNS v2</string>
 			<key>PayloadIdentifier</key>
-			<string>com.apple.dnsSettings.managed.9d981129-d086-4891-b2cf-165ede3f8a90</string>
+			<string>com.apple.dnsSettings.managed.9d981129-d086-4891-b2cf-165ede3f8a91</string>
 			<key>PayloadOrganization</key>
 			<string>TheiNsideDevs</string>
 			<key>PayloadType</key>
 			<string>com.apple.dnsSettings.managed</string>
 			<key>PayloadUUID</key>
-			<string>0085f63c-ab6d-45ae-9f87-8e0cef7335d4</string>
+			<string>0085f63c-ab6d-45ae-9f87-8e0cef7335d5</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 		</dict>
