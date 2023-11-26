@@ -1,8 +1,7 @@
 {
-  "status": "Up",
-  "description": " ",
-  "date": "Monday, November 20",
-  "expectedRelease": " ",
-  "devStatus": "There is currently no problems identified with sideloading.",
-  "color": "#00ff44"
+  "status": "Down",
+  "date": "Saturday, November 25",
+  "expectedRelease": "Friday, December 1",
+  "devStatus": "The problem has been identified and will be fixed upon next release.",
+  "color": "#ff0800"
 }
