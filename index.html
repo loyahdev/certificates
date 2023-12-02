@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple File List</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        a {
+            text-decoration: none;
+            color: blue;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Index of /files</h1>
+    <table>
+        <tr><th>File Name</th><th>File Size</th><th>Date</th></tr>
+        <!-- Repeat this block for each file -->
+        <tr>
+            <td><a href="link_to_file_1">file_1.zip</a></td>
+            <td>1.2M</td>
+            <td>2023-Mar-01 12:00</td>
+        </tr>
+        <!-- ... other files ... -->
+    </table>
+</body>
+</html>
