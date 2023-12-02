@@ -9,6 +9,7 @@
             background-color: #f0f0f0;
             margin: 0;
             padding: 20px;
+            color: red; /* Make general text red */
         }
         table {
             width: 100%;
@@ -17,29 +18,32 @@
         th, td {
             padding: 8px;
             text-align: left;
-            border-bottom: 1px solid #ddd;
+            background-color: #d3d3d3; /* Grey background for cells */
         }
         th {
-            background-color: #f2f2f2;
+            background-color: #a9a9a9; /* Darker grey background for header */
         }
         a {
             text-decoration: none;
-            color: blue;
+            color: red; /* Make links red */
         }
         a:hover {
             text-decoration: underline;
         }
+        .date {
+            color: black; /* Keep dates black */
+        }
     </style>
 </head>
 <body>
-    <h1>Index of /files</h1>
+    <h1 style="color:red;">Index of /files</h1> <!-- Make the header red -->
     <table>
         <tr><th>File Name</th><th>File Size</th><th>Date</th></tr>
         <!-- Repeat this block for each file -->
         <tr>
             <td><a href="link_to_file_1">file_1.zip</a></td>
             <td>1.2M</td>
-            <td>2023-Mar-01 12:00</td>
+            <td class="date">2023-Mar-01 12:00</td>
         </tr>
         <!-- ... other files ... -->
     </table>
