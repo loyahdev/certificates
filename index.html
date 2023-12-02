@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Make sure it's mobile-friendly -->
     <title>Simple File List</title>
     <style>
         body {
@@ -9,34 +10,44 @@
             background-color: #f0f0f0;
             margin: 0;
             padding: 20px;
-            color: red; /* Make general text red */
+            color: red; /* General text red */
         }
         table {
             width: 100%;
             border-collapse: collapse;
         }
-        th {
+        th, td {
             padding: 8px;
             text-align: left;
-            background-color: #d3d3d3; /* Grey background for cells */
+            background-color: #d3d3d3; /* Grey background */
+            color: red; /* Text color red */
         }
-        tr {
-            background-color: #e8e8e8;/* Darker grey background for header */
+        th {
+            background-color: #a9a9a9; /* Darker grey for header */
         }
         a {
             text-decoration: none;
-            color: red; /* Make links red */
+            color: red; /* Links red */
         }
         a:hover {
             text-decoration: underline;
         }
         .date {
-            color: black; /* Keep dates black */
+            color: black; /* Date text black */
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 5px;
+                font-size: 16px; /* Larger text for mobile */
+            }
+            th, td {
+                padding: 12px; /* Larger padding for table cells */
+            }
         }
     </style>
 </head>
 <body>
-    <h1 style="color:black;">Index of /files</h1> <!-- Make the header red -->
+    <h1>Index of /files</h1>
     <table>
         <tr><th>File Name</th><th>File Size</th><th>Date</th></tr>
         <!-- Repeat this block for each file -->
