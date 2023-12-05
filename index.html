@@ -50,6 +50,8 @@
     fetchRepoFiles('loyahdev', 'certificates', 'certificates');
 });
 
+const rootPath = 'certificates'; // Define the root path
+
 async function fetchRepoFiles(owner, repo, path) {
     // Fetch the contents from GitHub API
     const apiURL = path ? `https://api.github.com/repos/${owner}/${repo}/contents/${path}` : `https://api.github.com/repos/${owner}/${repo}/contents`;
@@ -85,11 +87,10 @@ async function fetchLastCommitDate(owner, repo, filePath) {
 
 async function updateFileList(items, owner, repo, path) {
     const table = document.querySelector('table');
-    // Clear existing rows (except header)
     Array.from(table.rows).slice(1).forEach(row => row.remove());
 
-    // Add 'Go Back' link if not in root directory
-    if (path) {
+    // Add 'Go Back' link if not in root directory and path is not empty
+    if (path && path !== rootPath) {
         const parentPath = path.split('/').slice(0, -1).join('/');
         const backRow = document.createElement('tr');
         backRow.innerHTML = `
@@ -108,16 +109,16 @@ async function updateFileList(items, owner, repo, path) {
         if (item.type === 'file') {
             lastCommitDate = await fetchLastCommitDate(owner, repo, item.path);
             sizeDisplay = formatBytes(item.size);
+            clickHandler = `href="${item.download_url}" target="_blank"`;
         } else if (item.type === 'dir') {
-            // Update the click handler for directories
-            clickHandler = `onclick="event.preventDefault(); fetchRepoFiles('${owner}', '${repo}', '${item.path}');"`;
+            clickHandler = `href="#" onclick="event.preventDefault(); fetchRepoFiles('${owner}', '${repo}', '${item.path}');"`
             sizeDisplay = 'Directory';
-            lastCommitDate = ''; // You may fetch the last commit date if needed
+            lastCommitDate = '';
         }
 
         const tr = document.createElement('tr');
         tr.innerHTML = `
-            <td><a href="#" ${clickHandler}>${item.name}</a></td>
+            <td><a ${clickHandler}>${item.name}</a></td>
             <td>${sizeDisplay}</td>
             <td class="date">${lastCommitDate}</td>
         `;
