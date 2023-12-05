@@ -66,7 +66,22 @@ async function fetchRepoFiles(owner, repo, path) {
     }
 }
 
-// ... existing fetchLastCommitDate and formatBytes functions ...
+async function fetchLastCommitDate(owner, repo, filePath) {
+        const commitsURL = `https://api.github.com/repos/${owner}/${repo}/commits?path=${filePath}`;
+        try {
+            const response = await fetch(commitsURL);
+            const commits = await response.json();
+            if (response.ok && commits.length > 0) {
+                return new Date(commits[0].commit.committer.date).toLocaleDateString();
+            } else {
+                console.error('Error fetching commits:', commits.message);
+                return 'Unknown';
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            return 'Unknown';
+        }
+    }
 
 async function updateFileList(items, owner, repo, path) {
     const table = document.querySelector('table');
