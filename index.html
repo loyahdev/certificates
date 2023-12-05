@@ -47,9 +47,10 @@
     </style>
     <script>
     document.addEventListener('DOMContentLoaded', function() {
-    // Get the path from the current URL
-    const path = window.location.pathname.replace('/certificates/', '');
-    fetchRepoFiles('loyahdev', 'certificates', path);
+    // Parse the current path from the URL.
+    // Assuming your content will be under the /certificates/ path in the URL.
+    var currentPath = window.location.pathname.split('/certificates/')[1] || '';
+    fetchRepoFiles('loyahdev', 'certificates', currentPath);
 });
 
 async function fetchRepoFiles(owner, repo, path) {
