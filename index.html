@@ -136,14 +136,14 @@ function directoryClicked(owner, repo, path) {
         // Handle back/forward browser navigation
 window.onpopstate = function(event) {
     if (event.state && event.state.path) {
-        const path = 'ownerName/repoName' + event.state.path;
+        const path = 'repoName' + event.state.path;
         fetchRepoFiles('ownerName', 'repoName', path);
     }
 };
 
 document.addEventListener('DOMContentLoaded', function() {
     // Replace 'ownerName', 'repoName', and 'initialPath' with actual values
-    fetchRepoFiles('ownerName', 'repoName', 'initialPath');
+    fetchRepoFiles('loyahdev', 'certificates', 'certificates');
 });
 
     </script>
