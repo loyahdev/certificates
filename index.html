@@ -83,7 +83,7 @@
         }
     }
 
-    async function updateFileList(items, owner, repo) {
+    async function updateFileList(items, owner, repo, path) {
     const table = document.querySelector('table');
     // Clear existing rows (except header)
     Array.from(table.rows).slice(1).forEach(row => row.remove());
@@ -91,19 +91,21 @@
     for (const item of items) {
         let lastCommitDate = 'Unknown';
         let sizeDisplay = '';
+        let clickHandler = '';
 
         if (item.type === 'file') {
             lastCommitDate = await fetchLastCommitDate(owner, repo, item.path);
             sizeDisplay = formatBytes(item.size);
         } else if (item.type === 'dir') {
-            // For directories, you may choose not to fetch the last commit date,
-            // or you can fetch the last commit for the directory itself.
+            // Directories will have an onclick event to fetch their contents
             sizeDisplay = 'Directory';
+            clickHandler = `onclick="fetchRepoFiles('${owner}', '${repo}', '${item.path}')"`;
+            lastCommitDate = ''; // Optionally remove the date for directories or fetch the last commit
         }
 
         const tr = document.createElement('tr');
         tr.innerHTML = `
-            <td><a href="${item.html_url}">${item.name}</a></td>
+            <td><a href="#" ${clickHandler}>${item.name}</a></td>
             <td>${sizeDisplay}</td>
             <td class="date">${lastCommitDate}</td>
         `;
@@ -119,6 +121,13 @@
             const i = Math.floor(Math.log(bytes) / Math.log(k));
             return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i];
         }
+
+        // Add this inside your <script> tag but outside of any function
+function directoryClicked(owner, repo, path) {
+    event.preventDefault(); // Prevent the default anchor action
+    fetchRepoFiles(owner, repo, path); // Fetch the contents of the directory
+}
+
     </script>
 </head>
 <body>
