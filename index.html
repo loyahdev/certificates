@@ -51,12 +51,6 @@
 });
 
 async function fetchRepoFiles(owner, repo, path) {
-    // Correctly construct the new path for the URL
-    const newPath = '/certificates/' + path;
-
-    // Update the URL in the address bar
-    history.pushState({ path: newPath }, '', newPath);
-
     // Fetch the contents from GitHub API
     const apiURL = path ? `https://api.github.com/repos/${owner}/${repo}/contents/${path}` : `https://api.github.com/repos/${owner}/${repo}/contents`;
     try {
@@ -72,27 +66,24 @@ async function fetchRepoFiles(owner, repo, path) {
     }
 }
 
-    async function fetchLastCommitDate(owner, repo, filePath) {
-        const commitsURL = `https://api.github.com/repos/${owner}/${repo}/commits?path=${filePath}`;
-        try {
-            const response = await fetch(commitsURL);
-            const commits = await response.json();
-            if (response.ok && commits.length > 0) {
-                return new Date(commits[0].commit.committer.date).toLocaleDateString();
-            } else {
-                console.error('Error fetching commits:', commits.message);
-                return 'Unknown';
-            }
-        } catch (error) {
-            console.error('Error:', error);
-            return 'Unknown';
-        }
-    }
+// ... existing fetchLastCommitDate and formatBytes functions ...
 
-    async function updateFileList(items, owner, repo, path) {
+async function updateFileList(items, owner, repo, path) {
     const table = document.querySelector('table');
     // Clear existing rows (except header)
     Array.from(table.rows).slice(1).forEach(row => row.remove());
+
+    // Add 'Go Back' link if not in root directory
+    if (path) {
+        const parentPath = path.split('/').slice(0, -1).join('/');
+        const backRow = document.createElement('tr');
+        backRow.innerHTML = `
+            <td><a href="#" onclick="event.preventDefault(); fetchRepoFiles('${owner}', '${repo}', '${parentPath}');">/</a></td>
+            <td></td>
+            <td></td>
+        `;
+        table.appendChild(backRow);
+    }
 
     for (const item of items) {
         let lastCommitDate = 'Unknown';
