@@ -48,30 +48,8 @@
     <script>
     document.addEventListener('DOMContentLoaded', function() {
         // Replace 'ownerName', 'repoName', and 'pathInRepo' with actual values
-        fetchRepoDetails('loyahdev', 'certificates', '');
+        fetchRepoFiles('loyahdev', 'certificates', '');
     });
-
-    async function fetchRepoDetails(owner, repo, path) {
-        const repoURL = `https://api.github.com/repos/${owner}/${repo}`;
-        try {
-            const response = await fetch(repoURL);
-            const repoData = await response.json();
-            if (response.ok) {
-                displayLastUpdated(repoData.pushed_at);
-                fetchRepoFiles(owner, repo, path);
-            } else {
-                console.error('Error fetching repository details:', repoData.message);
-            }
-        } catch (error) {
-            console.error('Error:', error);
-        }
-    }
-
-    function displayLastUpdated(lastUpdated) {
-        const lastUpdatedElement = document.createElement('p');
-        lastUpdatedElement.textContent = `Repository last updated on: ${new Date(lastUpdated).toLocaleDateString()}`;
-        document.body.insertBefore(lastUpdatedElement, document.body.firstChild);
-    }
 
     async function fetchRepoFiles(owner, repo, path) {
         const apiURL = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
@@ -79,7 +57,7 @@
             const response = await fetch(apiURL);
             const data = await response.json();
             if (response.ok) {
-                updateFileList(data);
+                updateFileList(data, owner, repo);
             } else {
                 console.error('Error fetching files:', data.message);
             }
@@ -88,20 +66,38 @@
         }
     }
 
-    function updateFileList(files) {
+    async function fetchLastCommitDate(owner, repo, filePath) {
+        const commitsURL = `https://api.github.com/repos/${owner}/${repo}/commits?path=${filePath}`;
+        try {
+            const response = await fetch(commitsURL);
+            const commits = await response.json();
+            if (response.ok && commits.length > 0) {
+                return new Date(commits[0].commit.committer.date).toLocaleDateString();
+            } else {
+                console.error('Error fetching commits:', commits.message);
+                return 'Unknown';
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            return 'Unknown';
+        }
+    }
+
+    async function updateFileList(files, owner, repo) {
         const table = document.querySelector('table');
         // Clear existing rows (except header)
         Array.from(table.rows).slice(1).forEach(row => row.remove());
 
-        files.forEach(file => {
+        for (const file of files) {
+            const lastCommitDate = await fetchLastCommitDate(owner, repo, file.path);
             const tr = document.createElement('tr');
             tr.innerHTML = `
                 <td><a href="${file.download_url}">${file.name}</a></td>
                 <td>${formatBytes(file.size)}</td>
-                <td class="date">See repository update date</td>
+                <td class="date">${lastCommitDate}</td>
             `;
             table.appendChild(tr);
-        });
+        }
     }
 
         function formatBytes(bytes, decimals = 2) {
