@@ -51,26 +51,26 @@
 });
 
 async function fetchRepoFiles(owner, repo, path) {
-    // Update the URL in the address bar to include the base domain and repository
-    const baseDomain = 'https://loyahdev.me';
-    const newPath = baseDomain + '/certificates/' + path;
-    history.pushState({ path: path }, '', newPath);
+    // Correctly construct the new path for the URL
+    const newPath = '/certificates/' + path;
 
-    // Handle the case where the path is empty (root of the repo)
-    const apiPath = path ? `/${path}` : '';
-    const apiURL = `https://api.github.com/repos/${owner}/${repo}/contents${apiPath}`;
-        try {
-            const response = await fetch(apiURL);
-            const data = await response.json();
-            if (response.ok) {
-                updateFileList(data, owner, repo);
-            } else {
-                console.error('Error fetching files:', data.message);
-            }
-        } catch (error) {
-            console.error('Error:', error);
+    // Update the URL in the address bar
+    history.pushState({ path: newPath }, '', newPath);
+
+    // Fetch the contents from GitHub API
+    const apiURL = path ? `https://api.github.com/repos/${owner}/${repo}/contents/${path}` : `https://api.github.com/repos/${owner}/${repo}/contents`;
+    try {
+        const response = await fetch(apiURL);
+        const data = await response.json();
+        if (response.ok) {
+            updateFileList(data, owner, repo, path);
+        } else {
+            console.error('Error fetching files:', data.message);
         }
+    } catch (error) {
+        console.error('Error:', error);
     }
+}
 
     async function fetchLastCommitDate(owner, repo, filePath) {
         const commitsURL = `https://api.github.com/repos/${owner}/${repo}/commits?path=${filePath}`;
@@ -103,11 +103,10 @@ async function fetchRepoFiles(owner, repo, path) {
             lastCommitDate = await fetchLastCommitDate(owner, repo, item.path);
             sizeDisplay = formatBytes(item.size);
         } else if (item.type === 'dir') {
-            // Add a click event handler to directories
-            tr.querySelector('a').addEventListener('click', function(event) {
-                event.preventDefault();
-                fetchRepoFiles(owner, repo, item.path);
-            });
+            // Update the click handler for directories
+            clickHandler = `onclick="event.preventDefault(); fetchRepoFiles('${owner}', '${repo}', '${item.path}');"`;
+            sizeDisplay = 'Directory';
+            lastCommitDate = ''; // You may fetch the last commit date if needed
         }
 
         const tr = document.createElement('tr');
@@ -135,11 +134,14 @@ function directoryClicked(owner, repo, path) {
     fetchRepoFiles(owner, repo, path); // Fetch the contents of the directory
 }
 
-        // Handle back/forward browser navigation
+        // Handle browser navigation events
 window.onpopstate = function(event) {
     if (event.state && event.state.path) {
-        const path = 'repoName' + event.state.path;
-        fetchRepoFiles('ownerName', 'repoName', path);
+        // Extract the owner and repo name from the path
+        const owner = 'loyahdev';
+        const repo = 'certificates';
+        const path = event.state.path.replace('/certificates/', '');
+        fetchRepoFiles(owner, repo, path);
     }
 };
 
