@@ -46,40 +46,56 @@
         }
     </style>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            fetchRepoFiles('loyahdev', 'certificates', '');
-        });
+    document.addEventListener('DOMContentLoaded', function() {
+        // Replace 'ownerName', 'repoName', and 'pathInRepo' with actual values
+        fetchRepoDetails('loyahdev', 'certificates', '');
+    });
 
-        async function fetchRepoFiles(owner, repo, path) {
-            const apiURL = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
-            try {
-                const response = await fetch(apiURL);
-                const data = await response.json();
-                if (response.ok) {
-                    updateFileList(data);
-                } else {
-                    console.error('Error fetching files:', data.message);
-                }
-            } catch (error) {
-                console.error('Error:', error);
+    async function fetchRepoDetails(owner, repo, path) {
+        const repoURL = `https://api.github.com/repos/${owner}/${repo}`;
+        try {
+            const response = await fetch(repoURL);
+            const repoData = await response.json();
+            if (response.ok) {
+                fetchRepoFiles(owner, repo, path, repoData.pushed_at);
+            } else {
+                console.error('Error fetching repository details:', repoData.message);
             }
+        } catch (error) {
+            console.error('Error:', error);
         }
+    }
 
-        function updateFileList(files) {
-            const table = document.querySelector('table');
-            // Clear existing rows (except header)
-            Array.from(table.rows).slice(1).forEach(row => row.remove());
-
-            files.forEach(file => {
-                const tr = document.createElement('tr');
-                tr.innerHTML = `
-                    <td><a href="${file.download_url}">${file.name}</a></td>
-                    <td>${formatBytes(file.size)}</td>
-                    <td class="date">${new Date(file.git_url).toLocaleString()}</td>
-                `;
-                table.appendChild(tr);
-            });
+    async function fetchRepoFiles(owner, repo, path, lastUpdated) {
+        const apiURL = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
+        try {
+            const response = await fetch(apiURL);
+            const data = await response.json();
+            if (response.ok) {
+                updateFileList(data, lastUpdated);
+            } else {
+                console.error('Error fetching files:', data.message);
+            }
+        } catch (error) {
+            console.error('Error:', error);
         }
+    }
+
+    function updateFileList(files, lastUpdated) {
+        const table = document.querySelector('table');
+        // Clear existing rows (except header)
+        Array.from(table.rows).slice(1).forEach(row => row.remove());
+
+        files.forEach(file => {
+            const tr = document.createElement('tr');
+            tr.innerHTML = `
+                <td><a href="${file.download_url}">${file.name}</a></td>
+                <td>${formatBytes(file.size)}</td>
+                <td class="date">${new Date(lastUpdated).toLocaleDateString()}</td>
+            `;
+            table.appendChild(tr);
+        });
+    }
 
         function formatBytes(bytes, decimals = 2) {
             if (bytes === 0) return '0 Bytes';
