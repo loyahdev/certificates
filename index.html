@@ -47,19 +47,18 @@
     </style>
     <script>
     document.addEventListener('DOMContentLoaded', function() {
-    // Parse the current path from the URL.
-    // Assuming your content will be under the /certificates/ path in the URL.
-    var currentPath = window.location.pathname.split('/certificates/')[1] || '';
-    fetchRepoFiles('loyahdev', 'certificates', currentPath);
+    fetchRepoFiles('loyahdev', 'certificates', '');
 });
 
 async function fetchRepoFiles(owner, repo, path) {
-    // Update the URL in the address bar
+    // Correctly construct the new path for the URL
     const newPath = '/certificates/' + path;
-    history.replaceState({ path: newPath }, '', newPath);
+
+    // Update the URL in the address bar
+    history.pushState({ path: newPath }, '', newPath);
 
     // Fetch the contents from GitHub API
-    const apiURL = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
+    const apiURL = path ? `https://api.github.com/repos/${owner}/${repo}/contents/${path}` : `https://api.github.com/repos/${owner}/${repo}/contents`;
     try {
         const response = await fetch(apiURL);
         const data = await response.json();
@@ -138,6 +137,7 @@ function directoryClicked(owner, repo, path) {
         // Handle browser navigation events
 window.onpopstate = function(event) {
     if (event.state && event.state.path) {
+        // Extract the owner and repo name from the path
         const owner = 'loyahdev';
         const repo = 'certificates';
         const path = event.state.path.replace('/certificates/', '');
