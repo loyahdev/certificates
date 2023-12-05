@@ -83,22 +83,33 @@
         }
     }
 
-    async function updateFileList(files, owner, repo) {
-        const table = document.querySelector('table');
-        // Clear existing rows (except header)
-        Array.from(table.rows).slice(1).forEach(row => row.remove());
+    async function updateFileList(items, owner, repo) {
+    const table = document.querySelector('table');
+    // Clear existing rows (except header)
+    Array.from(table.rows).slice(1).forEach(row => row.remove());
 
-        for (const file of files) {
-            const lastCommitDate = await fetchLastCommitDate(owner, repo, file.path);
-            const tr = document.createElement('tr');
-            tr.innerHTML = `
-                <td><a href="${file.download_url}">${file.name}</a></td>
-                <td>${formatBytes(file.size)}</td>
-                <td class="date">${lastCommitDate}</td>
-            `;
-            table.appendChild(tr);
+    for (const item of items) {
+        let lastCommitDate = 'Unknown';
+        let sizeDisplay = '';
+
+        if (item.type === 'file') {
+            lastCommitDate = await fetchLastCommitDate(owner, repo, item.path);
+            sizeDisplay = formatBytes(item.size);
+        } else if (item.type === 'dir') {
+            // For directories, you may choose not to fetch the last commit date,
+            // or you can fetch the last commit for the directory itself.
+            sizeDisplay = 'Directory';
         }
+
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+            <td><a href="${item.html_url}">${item.name}</a></td>
+            <td>${sizeDisplay}</td>
+            <td class="date">${lastCommitDate}</td>
+        `;
+        table.appendChild(tr);
     }
+}
 
         function formatBytes(bytes, decimals = 2) {
             if (bytes === 0) return '0 Bytes';
