@@ -52,7 +52,11 @@
     });
 
     async function fetchRepoFiles(owner, repo, path) {
-        const apiURL = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
+    // Update the URL in the address bar
+    const newPath = '/' + path.split('/').slice(1).join('/'); // Remove the repo name from the path
+    history.pushState({ path: newPath }, '', newPath);
+
+    const apiURL = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
         try {
             const response = await fetch(apiURL);
             const data = await response.json();
@@ -97,10 +101,11 @@
             lastCommitDate = await fetchLastCommitDate(owner, repo, item.path);
             sizeDisplay = formatBytes(item.size);
         } else if (item.type === 'dir') {
-            // Directories will have an onclick event to fetch their contents
-            sizeDisplay = 'Directory';
-            clickHandler = `onclick="fetchRepoFiles('${owner}', '${repo}', '${item.path}')"`;
-            lastCommitDate = ''; // Optionally remove the date for directories or fetch the last commit
+            // Add a click event handler to directories
+            tr.querySelector('a').addEventListener('click', function(event) {
+                event.preventDefault();
+                fetchRepoFiles(owner, repo, item.path);
+            });
         }
 
         const tr = document.createElement('tr');
@@ -127,6 +132,19 @@ function directoryClicked(owner, repo, path) {
     event.preventDefault(); // Prevent the default anchor action
     fetchRepoFiles(owner, repo, path); // Fetch the contents of the directory
 }
+
+        // Handle back/forward browser navigation
+window.onpopstate = function(event) {
+    if (event.state && event.state.path) {
+        const path = 'ownerName/repoName' + event.state.path;
+        fetchRepoFiles('ownerName', 'repoName', path);
+    }
+};
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Replace 'ownerName', 'repoName', and 'initialPath' with actual values
+    fetchRepoFiles('ownerName', 'repoName', 'initialPath');
+});
 
     </script>
 </head>
