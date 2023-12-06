@@ -47,10 +47,10 @@
     </style>
      <script>
     document.addEventListener('DOMContentLoaded', function() {
-    fetchRepoFiles('loyahdev', 'certificates', 'certificates');
+    fetchRepoFiles('loyahdev', 'certificates', 'certs');
 });
 
-const rootPath = 'certificates'; // Define the root path
+const rootPath = 'certs'; // Define the root path
 
 async function fetchRepoFiles(owner, repo, path) {
     // Fetch the contents from GitHub API
@@ -147,7 +147,7 @@ window.onpopstate = function(event) {
         // Extract the owner and repo name from the path
         const owner = 'loyahdev';
         const repo = 'certificates';
-        const path = event.state.path.replace('/certificates/', '');
+        const path = event.state.path.replace('/certs/', '');
         fetchRepoFiles(owner, repo, path);
     }
 };
