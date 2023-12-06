@@ -50,7 +50,7 @@
     fetchRepoFiles('loyahdev', 'certificates', '');
 });
 
-const rootPath = 'certs'; // Define the root path
+const rootPath = ''; // Define the root path
 
 async function fetchRepoFiles(owner, repo, path) {
     // Fetch the contents from GitHub API
@@ -147,7 +147,7 @@ window.onpopstate = function(event) {
         // Extract the owner and repo name from the path
         const owner = 'loyahdev';
         const repo = 'certificates';
-        const path = event.state.path.replace('/certs/', '');
+        const path = event.state.path.replace('', '');
         fetchRepoFiles(owner, repo, path);
     }
 };
