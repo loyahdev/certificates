@@ -47,16 +47,21 @@
     </style>
      <script>
     document.addEventListener('DOMContentLoaded', function() {
-    fetchRepoFiles('loyahdev', 'certificates', '');
+    fetchRepoFiles('loyahdev', 'certificates', 'certs');
 });
 
-const rootPath = ''; // Define the root path
+const rootPath = 'certs'; // Define the root path
+
+const githubToken = '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'; // Replace with your actual token
 
 async function fetchRepoFiles(owner, repo, path) {
-    // Fetch the contents from GitHub API
     const apiURL = path ? `https://api.github.com/repos/${owner}/${repo}/contents/${path}` : `https://api.github.com/repos/${owner}/${repo}/contents`;
     try {
-        const response = await fetch(apiURL);
+        const response = await fetch(apiURL, {
+            headers: {
+                'Authorization': `token ${githubToken}`
+            }
+        });
         const data = await response.json();
         if (response.ok) {
             updateFileList(data, owner, repo, path);
@@ -147,7 +152,7 @@ window.onpopstate = function(event) {
         // Extract the owner and repo name from the path
         const owner = 'loyahdev';
         const repo = 'certificates';
-        const path = event.state.path.replace('', '');
+        const path = event.state.path.replace('/certs/', '');
         fetchRepoFiles(owner, repo, path);
     }
 };
