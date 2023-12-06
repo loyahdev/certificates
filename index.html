@@ -66,15 +66,15 @@ const rootPath = 'certs'; // Define the root path
                 return null; // Return null in case of an error
             }
         }
+         
+//const githubToken = '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'; // Replace with your actual token
 
-fetchData().then(text => {
+async function fetchRepoFiles(owner, repo, path) {
+    fetchData().then(text => {
             // You can use the text here
             console.log("Received text:", text);
             const githubToken = text;
         });
-//const githubToken = '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'; // Replace with your actual token
-
-async function fetchRepoFiles(owner, repo, path) {
     const apiURL = path ? `https://api.github.com/repos/${owner}/${repo}/contents/${path}` : `https://api.github.com/repos/${owner}/${repo}/contents`;
     try {
         const response = await fetch(apiURL, {
