@@ -1,9 +1,9 @@
 {
-  "status": "Revoked",
-  "cert": "Gac Trumpchi Car Sales Co.",
-  "date": "2023-04-21 09:51:36",
-  "expire": "2026-04-20 09:51:35",
+  "status": "Signed",
+  "cert": "Henan Provincial Communications Planning Survey & Design Institute Co.",
+  "date": "2023-11-20 05:20:19",
+  "expire": "2026-11-19 05:20:18",
   "blacklisting": "True",
   "download": "https://loyahdev.me/certificates/",
-  "color": "#ff0000"
+  "color": "#00ff00"
 }
