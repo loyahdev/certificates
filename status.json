@@ -1,9 +1,11 @@
 {
-  "status": "Revoked",
-  "cert": "Henan Provincial Communications Planning Survey & Design Institute Co.",
-  "date": "2023-11-20 05:20:19",
-  "expire": "2026-11-19 05:20:18",
-  "blacklisting": "True",
-  "download": "https://loyahdev.me/certificates/",
-  "color": "#ff0000"
+  "status": "Signed",
+  "cert": "China Everbright Limited",
+  "issuer": "<Name(CN=Apple Worldwide Developer Relations Certification Authority,OU=G3,O=Apple Inc.,C=US)>",
+  "subject": "<Name(UID=N48A2TUUVK,CN=iPhone Distribution: China Everbright Limited,OU=N48A2TUUVK,O=China Everbright Limited,C=US)>",
+  "date": "2022-09-26 04:13:11",
+  "expire": "2025-09-25 04:13:10",
+  "color": "#00ff00",
+  "bool_status": false,
+  "blacklisting": "Unknown"
 }
