@@ -6,6 +6,6 @@
   "date": "2023-09-22 09:12:58",
   "expire": "2026-09-21 09:12:57",
   "color": "#00ff00",
-  "bool_status": true,
+  "bool_status": false,
   "blacklisting": "False"
 }
