@@ -1,9 +1,9 @@
 {
-  "status": "Signed",
+  "status": "Revoked",
   "cert": "Henan Provincial Communications Planning Survey & Design Institute Co.",
   "date": "2023-11-20 05:20:19",
   "expire": "2026-11-19 05:20:18",
   "blacklisting": "True",
   "download": "https://loyahdev.me/certificates/",
-  "color": "#00ff00"
+  "color": "#ff0000"
 }
