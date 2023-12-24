@@ -1,10 +1,10 @@
 {
   "status": "Signed",
-  "cert": "China Everbright Limited",
+  "cert": "Unknown",
   "issuer": "<Name(CN=Apple Worldwide Developer Relations Certification Authority,OU=G3,O=Apple Inc.,C=US)>",
-  "subject": "<Name(UID=N48A2TUUVK,CN=iPhone Distribution: China Everbright Limited,OU=N48A2TUUVK,O=China Everbright Limited,C=US)>",
-  "date": "2022-09-26 04:13:11",
-  "expire": "2025-09-25 04:13:10",
+  "subject": "<Name(UID=FAUDYS92MB,CN=Apple Distribution: David Neil HENSCH (FAUDYS92MB),OU=FAUDYS92MB,O=David Neil HENSCH,C=CA)>",
+  "date": "2023-11-05 14:15:47",
+  "expire": "2024-11-04 14:15:46",
   "color": "#00ff00",
   "bool_revoked_status": false,
   "blacklisting": "False"
