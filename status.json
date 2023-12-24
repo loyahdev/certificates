@@ -1,6 +1,6 @@
 {
   "status": "Signed",
-  "cert": "Unknown",
+  "cert": "David Neil HENSCH (FAUDYS92MB)",
   "issuer": "<Name(CN=Apple Worldwide Developer Relations Certification Authority,OU=G3,O=Apple Inc.,C=US)>",
   "subject": "<Name(UID=FAUDYS92MB,CN=Apple Distribution: David Neil HENSCH (FAUDYS92MB),OU=FAUDYS92MB,O=David Neil HENSCH,C=CA)>",
   "date": "2023-11-05 14:15:47",
