@@ -1,10 +1,10 @@
 {
   "status": "Signed",
-  "cert": "Mylan Inc.",
+  "cert": "David Neil HENSCH (FAUDYS92MB)",
   "issuer": "<Name(CN=Apple Worldwide Developer Relations Certification Authority,OU=G3,O=Apple Inc.,C=US)>",
-  "subject": "<Name(UID=68SXA5MV6R,CN=iPhone Distribution: Mylan Inc.,OU=68SXA5MV6R,O=Mylan Inc.,C=US)>",
-  "date": "2023-09-22 09:12:58",
-  "expire": "2026-09-21 09:12:57",
+  "subject": "<Name(UID=FAUDYS92MB,CN=Apple Distribution: David Neil HENSCH (FAUDYS92MB),OU=FAUDYS92MB,O=David Neil HENSCH,C=CA)>",
+  "date": "2023-11-05 14:15:47",
+  "expire": "2024-11-04 14:15:46",
   "color": "#00ff00",
   "bool_revoked_status": false,
   "blacklisting": "False"
