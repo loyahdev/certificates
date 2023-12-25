@@ -1,11 +1,11 @@
 {
-  "status": "Revoked",
-  "cert": "Henan Provincial Communications Planning Survey & Design Institute Co.\\",
+  "status": "Signed",
+  "cert": "Mylan Inc.",
   "issuer": "<Name(CN=Apple Worldwide Developer Relations Certification Authority,OU=G3,O=Apple Inc.,C=US)>",
-  "subject": "<Name(UID=W94WHMS6HF,CN=iPhone Distribution: Henan Provincial Communications Planning Survey & Design Institute Co.\\,Ltd.,OU=W94WHMS6HF,O=Henan Provincial Communications Planning Survey & Design Institute Co.\\,Ltd.,C=US)>",
-  "date": "2023-11-20 05:20:19",
-  "expire": "2026-11-19 05:20:18",
-  "color": "#ff0000",
-  "bool_revoked_status": true,
+  "subject": "<Name(UID=68SXA5MV6R,CN=iPhone Distribution: Mylan Inc.,OU=68SXA5MV6R,O=Mylan Inc.,C=US)>",
+  "date": "2023-09-22 09:12:58",
+  "expire": "2026-09-21 09:12:57",
+  "color": "#00ff00",
+  "bool_revoked_status": false,
   "blacklisting": "False"
 }
