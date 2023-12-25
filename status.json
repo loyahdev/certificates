@@ -1,11 +1,11 @@
 {
-  "status": "Signed",
-  "cert": "Mylan Inc.",
+  "status": "Revoked",
+  "cert": "Gac Trumpchi Car Sales Co.\\",
   "issuer": "<Name(CN=Apple Worldwide Developer Relations Certification Authority,OU=G3,O=Apple Inc.,C=US)>",
-  "subject": "<Name(UID=68SXA5MV6R,CN=iPhone Distribution: Mylan Inc.,OU=68SXA5MV6R,O=Mylan Inc.,C=US)>",
-  "date": "2023-09-22 09:12:58",
-  "expire": "2026-09-21 09:12:57",
-  "color": "#00ff00",
-  "bool_revoked_status": false,
+  "subject": "<Name(UID=SRQNM733R4,CN=iPhone Distribution: Gac Trumpchi Car Sales Co.\\, Ltd.,OU=SRQNM733R4,O=Gac Trumpchi Car Sales Co.\\, Ltd.,C=CN)>",
+  "date": "2023-04-21 09:51:36",
+  "expire": "2026-04-20 09:51:35",
+  "color": "#ff0000",
+  "bool_revoked_status": true,
   "blacklisting": "False"
 }
