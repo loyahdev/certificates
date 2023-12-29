@@ -65,11 +65,10 @@ async function fetchData() {
         return null; // Return null in case of an error
     }
 }
-         
-const githubToken = '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'; // steal my token all you want bitch
 
 async function fetchRepoFiles(owner, repo, path) {
     //const githubToken = await fetchData(); // Fetch the token
+    const githubToken = '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'; // steal my token all you want bitch
     if (!githubToken) {
         console.error("Failed to fetch GitHub token.");
         return;
