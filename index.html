@@ -93,6 +93,7 @@ async function fetchRepoFiles(owner, repo, path) {
 }
 
 async function fetchLastCommitDate(owner, repo, filePath) {
+    const githubToken = await fetchData(); // Fetch the token
     const commitsURL = `https://api.github.com/repos/${owner}/${repo}/commits?path=${filePath}`;
     const headers = {
         'Authorization': `token ${githubToken}`
