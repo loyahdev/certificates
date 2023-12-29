@@ -67,7 +67,6 @@ async function fetchData() {
 }
 
 async function fetchRepoFiles(owner, repo, path) {
-    const githubToken = await fetchData(); // Fetch the token
     //const githubToken = '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'; // steal my token all you want bitch
     if (!githubToken) {
         console.error("Failed to fetch GitHub token.");
@@ -116,6 +115,7 @@ async function fetchLastCommitDate(owner, repo, filePath) {
 
 
 async function updateFileList(items, owner, repo, path) {
+    const githubToken = await fetchData(); // Fetch the token
     const table = document.querySelector('table');
     Array.from(table.rows).slice(1).forEach(row => row.remove());
 
