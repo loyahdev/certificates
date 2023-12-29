@@ -126,29 +126,35 @@ async function updateFileList(items, owner, repo, path) {
         table.appendChild(backRow);
     }
 
-    for (const item of items) {
-        let lastCommitDate = 'Unknown';
-        let sizeDisplay = '';
-        let clickHandler = '';
-
+    // Create an array of promises for fetching last commit dates
+    const commitDatePromises = items.map(item => {
         if (item.type === 'file') {
-            lastCommitDate = await fetchLastCommitDate(owner, repo, item.path);
-            sizeDisplay = formatBytes(item.size);
-            clickHandler = `href="${item.download_url}" target="_blank"`;
-        } else if (item.type === 'dir') {
-            clickHandler = `href="#" onclick="event.preventDefault(); fetchRepoFiles('${owner}', '${repo}', '${item.path}');"`
-            sizeDisplay = 'Directory';
-            lastCommitDate = '';
+            return fetchLastCommitDate(owner, repo, item.path);
+        } else {
+            return Promise.resolve(''); // Directories don't need a date
         }
+    });
+
+    // Fetch all commit dates in parallel
+    const commitDates = await Promise.all(commitDatePromises);
+
+    // Batch DOM updates
+    const fragment = document.createDocumentFragment();
+
+    items.forEach((item, index) => {
+        let sizeDisplay = item.type === 'file' ? formatBytes(item.size) : 'Directory';
+        let clickHandler = item.type === 'file' ? `href="${item.download_url}" target="_blank"` : `href="#" onclick="event.preventDefault(); fetchRepoFiles('${owner}', '${repo}', '${item.path}');"`;
 
         const tr = document.createElement('tr');
         tr.innerHTML = `
             <td><a ${clickHandler}>${item.name}</a></td>
             <td>${sizeDisplay}</td>
-            <td class="date">${lastCommitDate}</td>
+            <td class="date">${commitDates[index]}</td>
         `;
-        table.appendChild(tr);
-    }
+        fragment.appendChild(tr);
+    });
+
+    table.appendChild(fragment);
 }
 
         function formatBytes(bytes, decimals = 2) {
