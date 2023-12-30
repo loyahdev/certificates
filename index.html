@@ -6,20 +6,20 @@
     <title>Certificate Files</title>
     <style>
         body {
-            font-family: 'Lucida', monospace;
-            margin: 0;
-            padding: 20px;
-            color: black;
-            background: linear-gradient(45deg, #483D8B, #0000FF, #000000, #483D8B, #0000FF, #000000);
-            background-size: 200% 200%;
-            animation: gradient 10s ease infinite;
-        }
+    font-family: 'Lucida', monospace;
+    margin: 0;
+    padding: 20px;
+    color: black;
+    background: linear-gradient(45deg, #483D8B, #0000FF, #000000);
+    background-size: 300% 300%;
+    animation: gradientAnimation 10s ease infinite;
+}
 
-        @keyframes gradient {
-            0% {
-                background-position: 0% 50%;
-            }
-        }
+@keyframes gradientAnimation {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
         table {
             width: 100%;
             border-collapse: collapse;
