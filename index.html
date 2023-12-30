@@ -10,16 +10,21 @@
     margin: 0;
     padding: 20px;
     color: black;
-    background: linear-gradient(45deg, #483D8B, #0000FF, #000000);
-    background-size: 300% 300%;
-    animation: gradientAnimation 10s ease infinite;
+    /* Single gradient background */
+    background: linear-gradient(45deg, #483D8B, #0000FF, #000000, #483D8B);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
 }
 
 @keyframes gradientAnimation {
-    0% {background-position: 0% 50%;}
-    50% {background-position: 100% 50%;}
-    100% {background-position: 0% 50%;}
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
 }
+
         table {
             width: 100%;
             border-collapse: collapse;
