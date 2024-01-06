@@ -1,10 +1,10 @@
 {
   "status": "Signed",
-  "cert": "AVIATION INFORMATION AND TELECOMMUNICATIONS JSC",
+  "cert": "China Continent Property & Casualty Insurance Company Ltd.",
   "issuer": "<Name(CN=Apple Worldwide Developer Relations Certification Authority,OU=G3,O=Apple Inc.,C=US)>",
-  "subject": "<Name(UID=4FC34VH6K5,CN=iPhone Distribution: AVIATION INFORMATION AND TELECOMMUNICATIONS JSC,OU=4FC34VH6K5,O=AVIATION INFORMATION AND TELECOMMUNICATIONS JSC,C=US)>",
-  "date": "2021-12-29 07:56:41",
-  "expire": "2024-12-28 07:56:40",
+  "subject": "<Name(UID=4UQW3F89X2,CN=iPhone Distribution: China Continent Property & Casualty Insurance Company Ltd.,OU=4UQW3F89X2,O=China Continent Property & Casualty Insurance Company Ltd.,C=US)>",
+  "date": "2021-08-18 06:57:54",
+  "expire": "2024-08-17 06:57:53",
   "color": "#00ff00",
   "bool_revoked_status": false,
   "blacklisting": "Unknown"
