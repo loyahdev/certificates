@@ -1,11 +1,11 @@
 {
-  "status": "Signed",
+  "status": "Revoked",
   "cert": "China Continent Property & Casualty Insurance Company Ltd.",
   "issuer": "<Name(CN=Apple Worldwide Developer Relations Certification Authority,OU=G3,O=Apple Inc.,C=US)>",
   "subject": "<Name(UID=4UQW3F89X2,CN=iPhone Distribution: China Continent Property & Casualty Insurance Company Ltd.,OU=4UQW3F89X2,O=China Continent Property & Casualty Insurance Company Ltd.,C=US)>",
   "date": "2021-08-18 06:57:54",
   "expire": "2024-08-17 06:57:53",
-  "color": "#00ff00",
-  "bool_revoked_status": false,
+  "color": "#ff0000",
+  "bool_revoked_status": true,
   "blacklisting": "Unknown"
 }
