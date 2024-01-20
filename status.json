@@ -1,10 +1,10 @@
 {
   "status": "Signed",
-  "cert": "ANBANG INSURANCE LTD.",
+  "cert": "Rizhao Sunday Power Generation Co.\\",
   "issuer": "<Name(CN=Apple Worldwide Developer Relations Certification Authority,OU=G3,O=Apple Inc.,C=US)>",
-  "subject": "<Name(UID=H5SM6ZV38F,CN=iPhone Distribution: ANBANG INSURANCE LTD.,OU=H5SM6ZV38F,O=ANBANG INSURANCE LTD.,C=US)>",
-  "date": "2022-08-10 06:27:54",
-  "expire": "2025-08-09 06:27:53",
+  "subject": "<Name(UID=E3EHPEJCH2,CN=iPhone Distribution: Rizhao Sunday Power Generation Co.\\, Ltd.,OU=E3EHPEJCH2,O=Rizhao Sunday Power Generation Co.\\, Ltd.,C=US)>",
+  "date": "2021-08-24 08:26:46",
+  "expire": "2024-08-23 08:26:45",
   "color": "#00ff00",
   "bool_revoked_status": false,
   "blacklisting": "Unknown"
