@@ -59,6 +59,18 @@
                 padding: 12px; /* Larger padding for table cells */
             }
         }
+
+	td.filename {
+    max-width: 150px; /* Adjust as needed */
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+td.size, td.date {
+    white-space: nowrap;
+}
+
+/* Other styles as needed */
     </style>
      <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -168,12 +180,12 @@ async function updateFileList(items, owner, repo, path) {
         let clickHandler = item.type === 'file' ? `href="${item.download_url}" target="_blank"` : `href="#" onclick="event.preventDefault(); fetchRepoFiles('${owner}', '${repo}', '${item.path}');"`;
 
         const tr = document.createElement('tr');
-        tr.innerHTML = `
-            <td><a ${clickHandler}>${item.name}</a></td>
-            <td>${sizeDisplay}</td>
-            <td class="date">${commitDates[index]}</td>
-        `;
-        fragment.appendChild(tr);
+tr.innerHTML = `
+    <td class="filename"><a ${clickHandler}>${item.name}</a></td>
+    <td class="size">${sizeDisplay}</td>
+    <td class="date">${commitDates[index]}</td>
+`;
+fragment.appendChild(tr);
     });
 
     table.appendChild(fragment);
