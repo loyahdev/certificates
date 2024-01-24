@@ -101,6 +101,14 @@ async function fetchRepoFiles(owner, repo, path) {
         return;
     }
 
+    // Check if the path is the rootPath, and show/hide the DNS info accordingly
+    const dnsInfo = document.getElementById('dnsInfo');
+    if (path === rootPath || !path) {
+        dnsInfo.style.display = 'block'; // Show DNS info on main page
+    } else {
+        dnsInfo.style.display = 'none'; // Hide DNS info in directories
+    }
+
     const apiURL = path ? `https://api.github.com/repos/${owner}/${repo}/contents/${path}` : `https://api.github.com/repos/${owner}/${repo}/contents`;
     try {
         const response = await fetch(apiURL, {
@@ -230,13 +238,14 @@ window.onpopstate = function(event) {
         </tr>
         <!-- ... other files ... -->
     </table>
-    <p>Below is a list of DNS servers that will block blacklists and revokes on certificates. These DNS servers effectively and efficiently block Apple’s servers and allow you to use enterprise certificates you may have problems with.<p>
+    <div id="dnsInfo">
+        <p>Below is a list of DNS servers that will block blacklists and revokes on certificates. These DNS servers effectively and efficiently block Apple’s servers and allow you to use enterprise certificates you may have problems with.<p>
 
-<p>If you have an error saying “Integrity Cannot Be Verified”, the certificate you’re using is revoked and cannot be used unless with a DNS method. Revokes are caused by the enterprise certificate distributor themselves. They might revoke them due to a found leak of there files online or to update them for their company employees.</p>
+    	<p>If you have an error saying “Integrity Cannot Be Verified”, the certificate you’re using is revoked and cannot be used unless with a DNS method. Revokes are caused by the enterprise certificate distributor themselves. They might revoke them due to a found leak of there files online or to update them for their company employees.</p>
 
-<p>If you have an error saying “Unable To Verify” and it’s asking for an internet connection. You are blacklisted from the certificate and this can only be fixed by waiting for a new certificate or using a DNS method. Apple causes blacklists and it happens when an extreme amount of users use these enterprise certificates, it happens for security reasons and safety of the company.</p>
+	<p>If you have an error saying “Unable To Verify” and it’s asking for an internet connection. You are blacklisted from the certificate and this can only be fixed by waiting for a new certificate or using a DNS method. Apple causes blacklists and it happens when an extreme amount of users use these enterprise certificates, it happens for security reasons and safety of the company.</p>
 
-<p>The DNS servers below have not been verified working but have been tested:</p>
+	<p>The DNS servers below have not been verified working but have been tested:</p>
 DNS #1: <a href="https://www.google.com/url?q=https%3A%2F%2Fraw.githubusercontent.com%2Ftoasty-dev%2Fkhoindvnenglish%2Fmain%2Fkhoindvntranslated.mobileconfig&sa=D&sntz=1&usg=AOvVaw2bnOUz14RIKa5oR1QtCe-A">khoindvnenglish</a>
 
 DNS #2: <a href="https://soufgameyt.github.io/nezusdns.mobileconfig">nezusdns</a>
@@ -246,5 +255,6 @@ DNS #3: <a href="https://raw.githubusercontent.com/nhutgg/nhutgg.github.io/main/
 DNS #4: <a href="https://raw.githubusercontent.com/nhutgg/nhutgg.github.io/main/mobileconfig/dnspronew.mobileconfig">dnspronew</a>
 	
 DNS #5: <a href="https://raw.githubusercontent.com/toasty-dev/khovinenglish2/main/khovin.mobileconfig">khovinenglish2</a>
+    </div>
 </body>
 </html>
