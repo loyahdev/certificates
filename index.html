@@ -230,14 +230,22 @@ window.onpopstate = function(event) {
         </tr>
         <!-- ... other files ... -->
     </table>
-    <p>dns #1: https://www.google.com/url?q=https%3A%2F%2Fraw.githubusercontent.com%2Ftoasty-dev%2Fkhoindvnenglish%2Fmain%2Fkhoindvntranslated.mobileconfig&sa=D&sntz=1&usg=AOvVaw2bnOUz14RIKa5oR1QtCe-A
+    <p>Below is a list of DNS servers that will block blacklists and revokes on certificates. These DNS servers effectively and efficiently block Apple’s servers and allow you to use enterprise certificates you may have problems with.
 
-dns #2: https://soufgameyt.github.io/nezusdns.mobileconfig
+If you have an error saying “Integrity Cannot Be Verified”, the certificate you’re using is revoked and cannot be used unless with a DNS method. Revokes are caused by the enterprise certificate distributor themselves. They might revoke them due to a found leak of there files online or to update them for their company employees.
 
-dns #3: https://raw.githubusercontent.com/nhutgg/nhutgg.github.io/main/mobileconfig/dns_anticert_bynhutgg.mobileconfig
+If you have an error saying “Unable To Verify” and it’s asking for an internet connection. You are blacklisted from the certificate and this can only be fixed by waiting for a new certificate or using a DNS method. Apple causes blacklists and it happens when an extreme amount of users use these enterprise certificates, it happens for security reasons and safety of the company.
 
-dns #4: https://raw.githubusercontent.com/nhutgg/nhutgg.github.io/main/mobileconfig/dnspronew.mobileconfig
+The DNS servers below have not been verified working but have been tested:
+DNS #1: https://www.google.com/url?q=https%3A%2F%2Fraw.githubusercontent.com%2Ftoasty-dev%2Fkhoindvnenglish%2Fmain%2Fkhoindvntranslated.mobileconfig&sa=D&sntz=1&usg=AOvVaw2bnOUz14RIKa5oR1QtCe-A
 
-dns #5: https://raw.githubusercontent.com/toasty-dev/khovinenglish2/main/khovin.mobileconfig</p>
+DNS #2: https://soufgameyt.github.io/nezusdns.mobileconfig
+
+DNS #3: https://raw.githubusercontent.com/nhutgg/nhutgg.github.io/main/mobileconfig/dns_anticert_bynhutgg.mobileconfig
+
+DNS #4: https://raw.githubusercontent.com/nhutgg/nhutgg.github.io/main/mobileconfig/dnspronew.mobileconfig
+
+DNS #5: https://raw.githubusercontent.com/toasty-dev/khovinenglish2/main/khovin.mobileconfig
+    </p>
 </body>
 </html>
