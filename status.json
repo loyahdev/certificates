@@ -1,10 +1,10 @@
 {
   "status": "Signed",
-  "cert": "Rizhao Sunday Power Generation Co.\\",
+  "cert": "ARADA DEVELOPMENTS LLC",
   "issuer": "<Name(CN=Apple Worldwide Developer Relations Certification Authority,OU=G3,O=Apple Inc.,C=US)>",
-  "subject": "<Name(UID=E3EHPEJCH2,CN=iPhone Distribution: Rizhao Sunday Power Generation Co.\\, Ltd.,OU=E3EHPEJCH2,O=Rizhao Sunday Power Generation Co.\\, Ltd.,C=US)>",
-  "date": "2021-08-24 08:26:46",
-  "expire": "2024-08-23 08:26:45",
+  "subject": "<Name(UID=64TZQ4F4QA,CN=iPhone Distribution: ARADA DEVELOPMENTS LLC,OU=64TZQ4F4QA,O=ARADA DEVELOPMENTS LLC,C=AE)>",
+  "date": "2023-05-03 07:24:26",
+  "expire": "2026-05-02 07:24:25",
   "color": "#00ff00",
   "bool_revoked_status": false,
   "blacklisting": "Unknown"
