@@ -1,10 +1,10 @@
 {
   "status": "Signed",
-  "cert": "Bank of Chongqing Co.\\",
+  "cert": "Rizhao Sunday Power Generation Co.\\",
   "issuer": "<Name(CN=Apple Worldwide Developer Relations Certification Authority,OU=G3,O=Apple Inc.,C=US)>",
-  "subject": "<Name(UID=LP5QTE27PH,CN=iPhone Distribution: Bank of Chongqing Co.\\,Ltd.,OU=LP5QTE27PH,O=Bank of Chongqing Co.\\,Ltd.,C=US)>",
-  "date": "2022-07-08 02:43:52",
-  "expire": "2025-07-07 02:43:51",
+  "subject": "<Name(UID=E3EHPEJCH2,CN=iPhone Distribution: Rizhao Sunday Power Generation Co.\\, Ltd.,OU=E3EHPEJCH2,O=Rizhao Sunday Power Generation Co.\\, Ltd.,C=US)>",
+  "date": "2021-08-24 08:26:46",
+  "expire": "2024-08-23 08:26:45",
   "color": "#00ff00",
   "bool_revoked_status": false,
   "blacklisting": "Unknown"
