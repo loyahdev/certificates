@@ -1,10 +1,10 @@
 {
   "status": "Signed",
-  "cert": "Rizhao Sunday Power Generation Co.\\",
+  "cert": "VIETNAM POSTS AND TELECOMMUNICATIONS GROUP - HO CHI MINH CITY TELECOM BRANCH",
   "issuer": "<Name(CN=Apple Worldwide Developer Relations Certification Authority,OU=G3,O=Apple Inc.,C=US)>",
-  "subject": "<Name(UID=E3EHPEJCH2,CN=iPhone Distribution: Rizhao Sunday Power Generation Co.\\, Ltd.,OU=E3EHPEJCH2,O=Rizhao Sunday Power Generation Co.\\, Ltd.,C=US)>",
-  "date": "2021-08-24 08:26:46",
-  "expire": "2024-08-23 08:26:45",
+  "subject": "<Name(UID=JPMH34L85K,CN=iPhone Distribution: VIETNAM POSTS AND TELECOMMUNICATIONS GROUP - HO CHI MINH CITY TELECOM BRANCH,OU=JPMH34L85K,O=VIETNAM POSTS AND TELECOMMUNICATIONS GROUP - HO CHI MINH CITY TELECOM BRANCH,C=VN)>",
+  "date": "2021-01-12 14:32:43",
+  "expire": "2024-01-12 14:32:43",
   "color": "#00ff00",
   "bool_revoked_status": false,
   "blacklisting": "Unknown"
