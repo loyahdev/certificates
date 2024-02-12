@@ -1,10 +1,10 @@
 {
   "status": "Signed",
-  "cert": "VIETNAM POSTS AND TELECOMMUNICATIONS GROUP - HO CHI MINH CITY TELECOM BRANCH",
+  "cert": "Bank of Chongqing Co.\\",
   "issuer": "<Name(CN=Apple Worldwide Developer Relations Certification Authority,OU=G3,O=Apple Inc.,C=US)>",
-  "subject": "<Name(UID=JPMH34L85K,CN=iPhone Distribution: VIETNAM POSTS AND TELECOMMUNICATIONS GROUP - HO CHI MINH CITY TELECOM BRANCH,OU=JPMH34L85K,O=VIETNAM POSTS AND TELECOMMUNICATIONS GROUP - HO CHI MINH CITY TELECOM BRANCH,C=VN)>",
-  "date": "2021-01-12 14:32:43",
-  "expire": "2024-01-12 14:32:43",
+  "subject": "<Name(UID=LP5QTE27PH,CN=iPhone Distribution: Bank of Chongqing Co.\\,Ltd.,OU=LP5QTE27PH,O=Bank of Chongqing Co.\\,Ltd.,C=US)>",
+  "date": "2022-07-08 02:43:52",
+  "expire": "2025-07-07 02:43:51",
   "color": "#00ff00",
   "bool_revoked_status": false,
   "blacklisting": "Unknown"
