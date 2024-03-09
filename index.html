@@ -79,16 +79,23 @@ td.size, td.date {
 
 const rootPath = 'certs'; // Define the root path
 
+let githubToken = null; // This variable will store the token
+	     
 async function fetchData() {
+    if (githubToken !== null) {
+        return githubToken; // Return the stored token if it exists
+    }
+
     try {
         const response = await fetch('https://api-production-3af6.up.railway.app/api/i929848494jrjeiwjedjhcufjskajidurhensjauwwj8777888999928345/token');
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
-        const text = await response.text();
-        return text; // Return the raw text
+        githubToken = await response.text(); // Store the token for future use
+        return githubToken; // Return the new token
     } catch (error) {
         console.error('Fetch error: ', error);
+        githubToken = null; // Reset the token on error
         return null; // Return null in case of an error
     }
 }
