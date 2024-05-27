@@ -1,3 +1,8 @@
-# certificates
-# Apple Development and Code Signing Certificates
-This repository powers some of the most powerful services for enterprise development certificates on iOS. You can download **every** single enterprise certificate ever publicly released and use them in your own projects. This powers certificate checking services that check the validity and revocation of certificates. This powers [Flux Sideloading](https://fluxios.tech) and allows one of the fastest and most secure services to function at a users best expense.
+# certificates (please star the repo)
+# Apple Enterprise Development and Code Signing Certificates
+Thanks for coming here!
+You can almost all leaked enterprise certificates that are used to sign iOS apps.
+
+All certificates here are all availble to use for any of your services and an API to download them will be released soon.
+
+These took a long time to compile and update when each new certificate gets leaked. If you like this please consider donating at https://loyahdev.me
