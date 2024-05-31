@@ -1,11 +1,11 @@
 {
-  "status": "Signed",
+  "status": "Revoked",
   "cert": "Sunshine Insurance Group Co.\\",
   "issuer": "<Name(CN=Apple Worldwide Developer Relations Certification Authority,OU=G3,O=Apple Inc.,C=US)>",
   "subject": "<Name(UID=LH28XA7T22,CN=iPhone Distribution: Sunshine Insurance Group Co.\\, Ltd.,OU=LH28XA7T22,O=Sunshine Insurance Group Co.\\, Ltd.,C=CN)>",
   "date": "2024-03-26 04:53:48",
   "expire": "2027-03-26 04:53:47",
-  "color": "#00ff00",
-  "bool_revoked_status": false,
+  "color": "#ff0000",
+  "bool_revoked_status": true,
   "blacklisting": "Unknown"
 }
