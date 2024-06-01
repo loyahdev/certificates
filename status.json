@@ -1,11 +1,11 @@
 {
-  "status": "Revoked",
-  "cert": "Sunshine Insurance Group Co.\\",
+  "status": "Signed",
+  "cert": "David Hensch (FAUDYS92MB)",
   "issuer": "<Name(CN=Apple Worldwide Developer Relations Certification Authority,OU=G3,O=Apple Inc.,C=US)>",
-  "subject": "<Name(UID=LH28XA7T22,CN=iPhone Distribution: Sunshine Insurance Group Co.\\, Ltd.,OU=LH28XA7T22,O=Sunshine Insurance Group Co.\\, Ltd.,C=CN)>",
-  "date": "2024-03-26 04:53:48",
-  "expire": "2027-03-26 04:53:47",
-  "color": "#ff0000",
-  "bool_revoked_status": true,
+  "subject": "<Name(UID=FAUDYS92MB,CN=Apple Distribution: David Hensch (FAUDYS92MB),OU=FAUDYS92MB,O=David Hensch,C=CA)>",
+  "date": "2024-03-26 14:37:10",
+  "expire": "2025-03-26 14:37:09",
+  "color": "#00ff00",
+  "bool_revoked_status": false,
   "blacklisting": "Unknown"
 }
