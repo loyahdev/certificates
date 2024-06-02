@@ -7,5 +7,5 @@
   "expire": "2025-05-10 08:13:40",
   "color": "#00ff00",
   "bool_revoked_status": false,
-  "blacklisting": "Unknown"
+  "blacklisting": "Yes"
 }
