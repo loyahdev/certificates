@@ -1,11 +1,11 @@
 {
-  "status": "Signed",
+  "status": "Revoked",
   "cert": "Sun Life Everbright Life Insurance Co.\\",
   "issuer": "<Name(CN=Apple Worldwide Developer Relations Certification Authority,OU=G3,O=Apple Inc.,C=US)>",
   "subject": "<Name(UID=CXF7ZXD635,CN=iPhone Distribution: Sun Life Everbright Life Insurance Co.\\,Ltd,OU=CXF7ZXD635,O=Sun Life Everbright Life Insurance Co.\\,Ltd,C=CN)>",
   "date": "2022-05-11 08:13:41",
   "expire": "2025-05-10 08:13:40",
-  "color": "#00ff00",
-  "bool_revoked_status": false,
+  "color": "#ff0000",
+  "bool_revoked_status": true,
   "blacklisting": "Yes"
 }
