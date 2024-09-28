@@ -164,7 +164,7 @@
             }
 
             try {
-                const response = await fetch('https://certificates.thirdstore.app/pac');
+                const response = await fetch('https://certificates-api-production-0937.up.railway.app/pac/token');
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
