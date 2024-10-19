@@ -1,10 +1,10 @@
 {
   "status": "Signed",
-  "cert": "Sunshine Insurance Group Co.\\",
+  "cert": "Buongiorno Manufacturing Co.Limited (RSC5F2GK59)",
   "issuer": "<Name(CN=Apple Worldwide Developer Relations Certification Authority,OU=G3,O=Apple Inc.,C=US)>",
-  "subject": "<Name(UID=LH28XA7T22,CN=iPhone Distribution: Sunshine Insurance Group Co.\\, Ltd.,OU=LH28XA7T22,O=Sunshine Insurance Group Co.\\, Ltd.,C=US)>",
-  "date": "2024-06-06 01:21:42",
-  "expire": "2027-06-06 01:21:41",
+  "subject": "<Name(UID=RSC5F2GK59,CN=iPhone Distribution: Buongiorno Manufacturing Co.Limited (RSC5F2GK59),OU=RSC5F2GK59,O=Buongiorno Manufacturing Co.Limited,C=US)>",
+  "date": "2024-09-30 12:00:35",
+  "expire": "2025-09-30 12:00:34",
   "color": "#00ff00",
   "bool_revoked_status": false,
   "blacklisting": "Yes"
