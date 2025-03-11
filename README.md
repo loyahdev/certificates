@@ -1,4 +1,5 @@
-## certificates https://loyah.dev/certificates
+### As of Tue, March 11 2025, this repository has been unarchived.
+## Certificates: https://loyah.dev/certificates
 # Apple Enterprise Development and Code Signing Certificates
 Thanks for coming here!
 You can find almost all leaked enterprise certificates that are used to sign iOS apps.
