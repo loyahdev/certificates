@@ -1,10 +1,10 @@
 {
   "status": "Signed",
-  "cert": "Kotak Mahindra Bank Ltd",
+  "cert": "China Mobile Group Shandong Co.\\",
   "issuer": "<Name(CN=Apple Worldwide Developer Relations Certification Authority,OU=G3,O=Apple Inc.,C=US)>",
-  "subject": "<Name(UID=2JL8954UQK,CN=iPhone Distribution: Kotak Mahindra Bank Ltd,OU=2JL8954UQK,O=Kotak Mahindra Bank Ltd,C=IN)>",
-  "date": "2022-07-29 06:15:15",
-  "expire": "2025-07-28 06:15:14",
+  "subject": "<Name(UID=773Z3KSBGR,CN=iPhone Distribution: China Mobile Group Shandong Co.\\, Ltd.,OU=773Z3KSBGR,O=China Mobile Group Shandong Co.\\, Ltd.,C=CN)>",
+  "date": "2022-01-04 10:28:04",
+  "expire": "2025-01-03 10:28:03",
   "color": "#00ff00",
   "bool_revoked_status": false,
   "blacklisting": "Yes"
