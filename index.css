@@ -94,8 +94,6 @@ body {
         .faq-question {
             padding: 15px;
             cursor: pointer;
-            background: rgba(255, 255, 255, 0.2);
-            border: none;
             width: 100%;
             text-align: left;
             font-size: 12px
@@ -104,6 +102,10 @@ body {
             font-weight: bold;
             transition: background 0.3s;
             border-radius: 15px;
+            background: rgba(58, 74, 140, 0.25);
+            backdrop-filter: blur( 4px );
+            -webkit-backdrop-filter: blur( 4px );
+            border: 1px solid rgba( 255, 255, 255, 0.18 );
         }
         .faq-question:hover {
             background: rgba(255, 255, 255, 0.3);
@@ -112,6 +114,9 @@ body {
             padding: 10px;
             display: none;
             background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur( 4px );
+            -webkit-backdrop-filter: blur( 4px );
+            border: 1px solid rgba( 255, 255, 255, 0.18 );
             color: white;
             transition: max-height 0.3s ease;
             border-radius: 15px;
