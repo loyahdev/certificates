@@ -102,7 +102,7 @@ body {
             font-weight: bold;
             transition: background 0.3s;
             border-radius: 15px;
-            background: rgba(58, 74, 140, 0.25);
+            background: rgba(211, 211, 211, 0.25);
             backdrop-filter: blur( 4px );
             -webkit-backdrop-filter: blur( 4px );
             border: 1px solid rgba( 255, 255, 255, 0.18 );
