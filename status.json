@@ -1,10 +1,10 @@
 {
   "status": "Signed",
-  "cert": "Buongiorno Manufacturing Co.Limited (RSC5F2GK59)",
+  "cert": "Kotak Mahindra Bank Ltd",
   "issuer": "<Name(CN=Apple Worldwide Developer Relations Certification Authority,OU=G3,O=Apple Inc.,C=US)>",
-  "subject": "<Name(UID=RSC5F2GK59,CN=iPhone Distribution: Buongiorno Manufacturing Co.Limited (RSC5F2GK59),OU=RSC5F2GK59,O=Buongiorno Manufacturing Co.Limited,C=US)>",
-  "date": "2024-09-30 12:00:35",
-  "expire": "2025-09-30 12:00:34",
+  "subject": "<Name(UID=2JL8954UQK,CN=iPhone Distribution: Kotak Mahindra Bank Ltd,OU=2JL8954UQK,O=Kotak Mahindra Bank Ltd,C=IN)>",
+  "date": "2022-07-29 06:15:15",
+  "expire": "2025-07-28 06:15:14",
   "color": "#00ff00",
   "bool_revoked_status": false,
   "blacklisting": "Yes"
