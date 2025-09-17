@@ -1,3 +1,4 @@
+### * This project is now fully maintained.
 # certificates
 The best and most reliable source for the latest iOS Enterprise Development Certificates.
 You can find almost all leaked enterprise certificates that are used to sign iOS apps.
