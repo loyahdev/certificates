@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revoked Certificates</title>
+</head>
+<body>
+    <pre id="output">Loading...</pre>
+
+    <script src="index.js"></script>
+    <script>
+        async function fetchRevokedCerts() {
+            try {
+                const data = await getRevokedFileListFromGitHub();
+                document.body.textContent = JSON.stringify(data, null, 2);
+            } catch (error) {
+                document.body.textContent = 'Error fetching data: ' + error;
+            }
+        }
+
+        window.onload = fetchRevokedCerts;
+    </script>
+</body>
+</html>
