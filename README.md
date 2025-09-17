@@ -14,7 +14,7 @@ All certificates here are available to use for any of your services, and an API 
 > These are all HTML pages, but the content is in JSON format
 
 ## Status Methods
-To view status info of the latest certificate and if it's active, go to: https://loyah.dev/status.json
+To view status info of the latest certificate and if it's active, go to: https://loyah.dev/certificates/status.json
 
 Made with ❤️ by loyahdev
 
