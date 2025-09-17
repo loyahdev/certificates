@@ -7,9 +7,9 @@ All certificates here are available to use for any of your services, and an API 
 1. You can download all certificates and view the FAQ with issues and their solution here: https://loyah.dev/certificates
 2. You can download all of our certificates easily from the releases tab, as well as being able to view other important usage data
 3. To use our API and download the certs for use in your own tool, go to either:
-- https://loyah.dev/signed
-- https://loyah.dev/revoked
-- https://loyah.dev/all-certs
+- https://loyah.dev/certificates/signed
+- https://loyah.dev/certificates/revoked
+- https://loyah.dev/certificates/all-certs
 > [!TIP]
 > These are all HTML pages, but the content is in JSON format
 
