@@ -1,11 +1,11 @@
 {
-  "status": "Signed",
-  "cert": "GAC TOYOTA MOTOR CO.\\",
+  "status": "Revoked",
+  "cert": "GLOBAL TAKEOFF\\",
   "issuer": "<Name(CN=Apple Worldwide Developer Relations Certification Authority,OU=G3,O=Apple Inc.,C=US)>",
-  "subject": "<Name(UID=6L3J23729R,CN=iPhone Distribution: GAC TOYOTA MOTOR CO.\\,LTD,OU=6L3J23729R,O=GAC TOYOTA MOTOR CO.\\,LTD,C=CN)>",
-  "date": "2024-10-07 00:34:29",
-  "expire": "2027-10-07 00:34:28",
-  "color": "#00ff00",
-  "bool_revoked_status": false,
+  "subject": "<Name(UID=VTM793CVGA,CN=iPhone Distribution: GLOBAL TAKEOFF\\, INC,OU=VTM793CVGA,O=GLOBAL TAKEOFF\\, INC,C=US)>",
+  "date": "2025-06-05 08:55:30",
+  "expire": "2028-06-04 08:55:29",
+  "color": "#ff0000",
+  "bool_revoked_status": true,
   "blacklisting": "Yes"
 }
