@@ -2,7 +2,7 @@ let githubToken = null;
 
 const fetchGitHubToken = async () => {
     try {
-        const response = await fetch('https://certapi.sideloading.org/pac');
+        const response = await fetch('https://certapi.loyah.dev/pac');
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -17,7 +17,7 @@ const fetchGitHubToken = async () => {
 
 const getRevokedFileListFromGitHub = async () => {
     console.log("Fetching revoked certs...");
-    const apiUrl = 'https://api.github.com/repos/sideloadingdotorg/certificates/contents/certs/revoked';
+    const apiUrl = 'https://api.github.com/repos/loyahdev/certificates/contents/certs/revoked';
     try {
         const token = await fetchGitHubToken();
         if (!token) return [];
@@ -40,7 +40,7 @@ const getRevokedFileListFromGitHub = async () => {
 
 const getSignedFileListFromGitHub = async () => {
     console.log("Fetching signed certs...");
-    const apiUrl = 'https://api.github.com/repos/sideloadingdotorg/certificates/contents/certs/signed';
+    const apiUrl = 'https://api.github.com/repos/loyahdev/certificates/contents/certs/signed';
     try {
         const token = await fetchGitHubToken();
         if (!token) return [];
